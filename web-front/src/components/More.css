@@ -1,0 +1,64 @@
+/* Add a backdrop effect to blur everything outside the container */
+.blurred *:not(.more-container) {
+  filter: blur(5px);
+}
+
+#ordernow.more-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 10%;
+  margin-left: 40%;
+  position: relative;
+  z-index: 1000;
+}
+
+#number.more-number {
+  text-align: center;
+}
+
+#ordernow .more-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#ordernow .more-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#ordernow .more-button:hover {
+  background-color: #0056b3;
+}
+
+/* Ensure the blur effect applies correctly */
+body.blurred {
+  overflow: hidden;
+}
+#flip{
+    color: yellow;
+    animation: zig 1s linear infinite;
+}
+@keyframes zig {
+    0%{
+        color: yellow;
+    }
+    50%{
+        color: orange;
+
+    }
+    100%{
+        color: red;
+    }
+    
+}

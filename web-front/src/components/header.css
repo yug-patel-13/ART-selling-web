@@ -1,0 +1,328 @@
+body {
+  background-color: #402E7A;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #071952;
+  justify-content: space-evenly;
+  margin-left: 40px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+#photo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#l2, #l3, #l4, #l5, #l6 {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+#l3, #l4, #l5, #l6 {
+  margin-left: 40px;
+}
+
+@media (max-width: 700px) {
+  #l3, #l4, #l5, #l6 {
+    margin-left: 10px;
+  }
+}
+
+#l7 {
+  position: relative;
+  right: -50px;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+#srch {
+  width: auto;
+  height: 20px;
+  border: none;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+#l2:hover, #l3:hover, #l4:hover, #l5:hover, #l6:hover {
+  color: yellow;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #333;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+.footer-info p {
+  margin: 0;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 20px;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ffcc70;
+}
+
+#home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  animation: fadeIn 1.5s ease-in-out;
+  background-color: #402E7A;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.welcome-section {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.featured-artworks {
+  margin: 20px 0;
+}
+
+.artwork-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.artwork-item {
+  text-align: center;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.artwork-item img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ff6b6b;
+  border-radius: 8px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.artwork-item img:hover {
+  transform: scale(1.05);
+  border-color: #ffcc70;
+}
+
+.artist-bio {
+  margin: 20px 0;
+  text-align: center;
+  max-width: 800px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 9px black;
+  color: #333;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#l7 {
+  margin-left: 20px;
+  color: black;
+  border-radius: 50%;
+}
+
+#l7:hover {
+  color: blue;
+}
+
+#yug {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 30px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #444;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.sidebar a {
+  display: block;
+  margin: 15px 0;
+  color: white;
+  text-decoration: none;
+}
+
+#us {
+  font-size: 50px;
+  margin-left: 30px;
+  margin-top: 20%;
+}
+
+#signin {
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+  background-color: blue;
+  color: white;
+}
+
+#signup {
+  height: 40px;
+  width: 100px;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: yellow;
+}
+
+#signin:hover {
+  background-color: #071952;
+}
+
+#signup:hover {
+  background-color: #ffcc70;
+}
+
+#l8 {
+  position: relative;
+  left: 100px;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  #l7 {
+    position: static;
+    font-size: 24px;
+  }
+
+  #us {
+    font-size: 36px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  #signin, #signup {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  #more {
+    left: 0;
+    text-align: center;
+  }
+}
+
+/* Additional styles to prevent sidebar from hiding content */
+body.sidebar-open {
+  overflow: hidden;
+}
+
+.main-content {
+  padding-left: 20px;
+  transition: padding-left 0.3s ease;
+  
+}
+
+.sidebar-open .main-content {
+  padding-left: 270px; /* width of sidebar + 20px */
+}
+
+/* Close sidebar button for smaller screens */
+@media (max-width: 700px) {
+  .sidebar.open {
+    width: 100%;
+  }
+
+  .sidebar-open .main-content {
+    padding-left: 0;
+  }
+
+  .sidebar .close-btn {
+    font-size: 1.2em;
+  }
+
+  
+}
+body.footer{
+  overflow: hidden;
+}

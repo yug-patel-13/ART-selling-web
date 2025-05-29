@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Data</title>
+  <style>
+    .data-container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    .data-table th {
+      background-color: #f2f2f2;
+      color: black;
+    }
+    .data-table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .data-table tr:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="data-container">
+    <h1>Saved Data</h1>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Address</th>
+          <th>Name</th>
+          <th>Number</th>
+          <th>Payment Method</th>
+        </tr>
+      </thead>
+      <tbody id="data-body">
+        <!-- Data will be inserted here by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const response = await fetch('/api/buying');
+      const data = await response.json();
+      const dataBody = document.getElementById('data-body');
+      data.forEach(item => {
+        const row = document.createElement('tr');
+        const ArtCell = document.createElement('td');
+        idCell.textContent = item.Art;
+        row.appendChild(idCell);
+        const addressCell = document.createElement('td');
+        addressCell.textContent = item.address;
+        row.appendChild(addressCell);
+        const nameCell = document.createElement('td');
+        nameCell.textContent = item.name;
+        row.appendChild(nameCell);
+        const numberCell = document.createElement('td');
+        numberCell.textContent = item.number;
+        row.appendChild(numberCell);
+        const paymentCell = document.createElement('td');
+        paymentCell.textContent = item.paymentmethod;
+        row.appendChild(paymentCell);
+        dataBody.appendChild(row);
+      });
+    });
+  </script>
+</body>
+</html>
